@@ -4,6 +4,7 @@ import { Moon, Sun, Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import GamePage from './pages/GamePage'
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -126,6 +127,7 @@ function App() {
       <main className="container mx-auto px-4 py-6">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/games/:gameId" element={<GamePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
